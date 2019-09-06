@@ -65,8 +65,6 @@ bool comparator(std::string a, std::string b) {
   int aLen = strlen(a.c_str());
   int bLen = strlen(b.c_str());
 
-  int now = 0;
-
   int a_now = 0;
   int b_now = 0;
 
@@ -167,9 +165,6 @@ int main() {
   setvbuf(result, nullptr, _IONBF, 0);
 
   std::string rows[Max_row] = {};
-
-  std::string aa = "sls";
-  std::string bb = "ban";
 
   int num_rows = fread_string(rows, Max_row, ftext);
 
