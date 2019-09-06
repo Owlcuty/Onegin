@@ -29,8 +29,6 @@ The bitter record of the heart.
 
 Chapter One
 
-И жить торопится и чувствовать спешит.
-
 Rushes to live, and makes haste to feel.
 
 				Prince Vyazemsky
@@ -5679,11 +5677,11 @@ Or a decent fellow – you or me,
 Society, in short? What I’d advise
 Is: change your ways, if you’re wise.
 He’s fooled us far too long, and so…’
-– ‘You know him then?’ ­– ‘Well, yes and no.’
+– ‘You know him then?’ ­ ‘Well, yes and no.’
 
 9.
 
-­– ‘But why berate him so severely,
+- 'But why berate him so severely,
 Why are you so unforgiving?
 Is it because we’re given, clearly,
 To judging other ways of living;
