@@ -1,3 +1,7 @@
+/*! @file main.cpp
+ * Sorting Onegin
+*/
+
 #define EOF 0
 
 #include <iostream>
@@ -9,22 +13,38 @@
 
 const int Max_row = 6500;
 
+//! Замена a, b = b, a
 void swap(int* a, int* b) {
   int temp = *a;
   *a = *b;
   *b = temp;
 }
 
+/*! Является ли c буквой
+  @return 0 if c is not letter, 1 if c is letter
+*/
 bool is_letter(char c) {
   return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'));
 }
 
 // ----- Reading file --------------------------------------------------------------------------------------------------
 
+/*! Чтение строк с файла
+ * @param[in] rows Контейнер для строк, в который записывается результат
+ * @param[in] max_num Максимальное кол-во строк
+ * @param[in] inp Считываемый файл
+ *
+ * @param[out] cnt Количество строк
+ * @param cnt_in_row Количество символов в строке
+ * @param c Текущий символ
+ * @param last_row Текущая строка
+ * @param cnt_letter Количество слов в строке
+ * @param now Текущая строка
+*/
 int fread_string(std::string rows[], int max_num, FILE * inp) {
 
   std::string now = "";
-  int cnt = 0; // num of words
+  int cnt = 0;
   int cnt_in_row = 0;
   char c = 'c';
   int last_row = 0;
@@ -58,6 +78,18 @@ int fread_string(std::string rows[], int max_num, FILE * inp) {
 
 // String comprasion ---------------------------------------------------------------------------------------------------
 
+/*! Сравнение строк a и b
+ * @param c1 Текущий символ в строке a
+ * @param c2 Текущий символ в строке b
+ *
+ * @param aLen Размер строки a
+ * @param bLen Размер строки b
+ *
+ * @param a_now Текущий номер символа в строке a
+ * @param b_now Текущий номер символа в строке b
+ *
+ * @return 0 if b <= a, 1 if a < b
+*/
 bool comparator(std::string a, std::string b) {
   char c1 = a[0];
   char c2 = b[0];
@@ -157,7 +189,17 @@ void heap_sort(std::string array[], int num_elem) {
 
 // ----------------------------------------------------------------------------------------------------------------------
 
-
+/**
+ * @brief Entry point
+ *
+ * Execution of the program
+ * starts here.
+ *
+ * @param argc Number of arguments
+ * @param argv List of arguments
+ *
+ * @return Program exit status
+ */
 int main() {
   FILE * ftext  = fopen("Onegin.txt", "r");
 

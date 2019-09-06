@@ -1,0 +1,131 @@
+\hypertarget{main_8cpp}{}\doxysection{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a59adc4c82490d23754cd39c2fb99b0da}\label{main_8cpp_a59adc4c82490d23754cd39c2fb99b0da}} 
+\#define {\bfseries E\+OF}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}\label{main_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}} 
+void \mbox{\hyperlink{main_8cpp_a4b9708d87be7a409eff20e5e7e8b43c8}{swap}} (int $\ast$a, int $\ast$b)
+\begin{DoxyCompactList}\small\item\em Замена a, b = b, a. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{main_8cpp_ad825cf098406dd71b3506c3e2c4713af}{is\+\_\+letter}} (char c)
+\item 
+int \mbox{\hyperlink{main_8cpp_aa3682526886669643b3ce352ee339b64}{fread\+\_\+string}} (std\+::string rows\mbox{[}$\,$\mbox{]}, int max\+\_\+num, F\+I\+LE $\ast$inp)
+\item 
+bool \mbox{\hyperlink{main_8cpp_a7334a0c43ed3230b66b9770541f518dc}{comparator}} (std\+::string a, std\+::string b)
+\item 
+\mbox{\Hypertarget{main_8cpp_a0903b01770c85eea57316c81aabd1e59}\label{main_8cpp_a0903b01770c85eea57316c81aabd1e59}} 
+void {\bfseries heapify} (std\+::string array\mbox{[}$\,$\mbox{]}, int num\+\_\+elem, int v)
+\item 
+\mbox{\Hypertarget{main_8cpp_a37de9e0bab3d1645b4c2658bc79b4913}\label{main_8cpp_a37de9e0bab3d1645b4c2658bc79b4913}} 
+void {\bfseries build\+\_\+heap} (std\+::string array\mbox{[}$\,$\mbox{]}, int num\+\_\+elem)
+\item 
+\mbox{\Hypertarget{main_8cpp_a5b69c308f45e91414fe7f3ab62c3eb4a}\label{main_8cpp_a5b69c308f45e91414fe7f3ab62c3eb4a}} 
+void {\bfseries heap\+\_\+sort} (std\+::string array\mbox{[}$\,$\mbox{]}, int num\+\_\+elem)
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_ab6083244c7394a7a756984883d9d4e1c}\label{main_8cpp_ab6083244c7394a7a756984883d9d4e1c}} 
+const int {\bfseries Max\+\_\+row} = 6500
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sorting Onegin 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a7334a0c43ed3230b66b9770541f518dc}\label{main_8cpp_a7334a0c43ed3230b66b9770541f518dc}} 
+\index{main.cpp@{main.cpp}!comparator@{comparator}}
+\index{comparator@{comparator}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{comparator()}{comparator()}}
+{\footnotesize\ttfamily bool comparator (\begin{DoxyParamCaption}\item[{std\+::string}]{a,  }\item[{std\+::string}]{b }\end{DoxyParamCaption})}
+
+Сравнение строк a и b 
+\begin{DoxyParams}{Parameters}
+{\em c1} & Текущий символ в строке a \\
+\hline
+{\em c2} & Текущий символ в строке b\\
+\hline
+{\em a\+Len} & Размер строки a \\
+\hline
+{\em b\+Len} & Размер строки b\\
+\hline
+{\em a\+\_\+now} & Текущий номер символа в строке a \\
+\hline
+{\em b\+\_\+now} & Текущий номер символа в строке b\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if b $<$= a, 1 if a $<$ b 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_aa3682526886669643b3ce352ee339b64}\label{main_8cpp_aa3682526886669643b3ce352ee339b64}} 
+\index{main.cpp@{main.cpp}!fread\_string@{fread\_string}}
+\index{fread\_string@{fread\_string}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{fread\_string()}{fread\_string()}}
+{\footnotesize\ttfamily int fread\+\_\+string (\begin{DoxyParamCaption}\item[{std\+::string}]{rows\mbox{[}$\,$\mbox{]},  }\item[{int}]{max\+\_\+num,  }\item[{F\+I\+LE $\ast$}]{inp }\end{DoxyParamCaption})}
+
+Чтение строк с файла 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rows} & Контейнер для строк, в который записывается результат \\
+\hline
+\mbox{\texttt{ in}}  & {\em max\+\_\+num} & Максимальное кол-\/во строк \\
+\hline
+\mbox{\texttt{ in}}  & {\em inp} & Считываемый файл\\
+\hline
+\mbox{\texttt{ out}}  & {\em cnt} & Количество строк \\
+\hline
+ & {\em cnt\+\_\+in\+\_\+row} & Количество символов в строке \\
+\hline
+ & {\em c} & Текущий символ \\
+\hline
+ & {\em last\+\_\+row} & Текущая строка \\
+\hline
+ & {\em cnt\+\_\+letter} & Количество слов в строке \\
+\hline
+ & {\em now} & Текущая строка \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_ad825cf098406dd71b3506c3e2c4713af}\label{main_8cpp_ad825cf098406dd71b3506c3e2c4713af}} 
+\index{main.cpp@{main.cpp}!is\_letter@{is\_letter}}
+\index{is\_letter@{is\_letter}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_letter()}{is\_letter()}}
+{\footnotesize\ttfamily bool is\+\_\+letter (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+Является ли c буквой \begin{DoxyReturn}{Returns}
+0 if c is not letter, 1 if c is letter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Entry point. 
+
+Execution of the program starts here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments \\
+\hline
+{\em argv} & List of arguments\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Program exit status 
+\end{DoxyReturn}
